@@ -1,0 +1,18 @@
+﻿<Window x:Class="Kinect3DTracking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen"
+        Title="Kinect 3D Tracking" Height="500" Width="665">
+    <Grid>
+        <Viewport3D Name="ViewPortUtama" ClipToBounds="True" Visibility="Hidden">
+            <Viewport3D.Camera>
+                <PerspectiveCamera FarPlaneDistance="100" NearPlaneDistance="1" LookDirection="0,0,1" UpDirection="0,1,0" Position="0,0,0" FieldOfView="50" />
+            </Viewport3D.Camera>
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <DirectionalLight Color="White" Direction="-2,-3,-1" />
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+        </Viewport3D>
+        <Image Name="RGBView" Height="480" Width="640" />
+    </Grid>
+</Window>
